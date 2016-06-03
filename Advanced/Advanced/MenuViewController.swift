@@ -79,7 +79,8 @@ class MenuViewController: UITableViewController {
             case 0:
                 slideMenuController()?.closeLeft()
                 let experimentVC = storyboard?.instantiateViewControllerWithIdentifier("experiment") as! ExperimentViewController
-                presentViewController(experimentVC, animated: true, completion: nil)
+                let naviVC = UINavigationController(rootViewController: experimentVC)
+                presentViewController(naviVC, animated: true, completion: nil)
                 break
             //查看记录
             case 1:

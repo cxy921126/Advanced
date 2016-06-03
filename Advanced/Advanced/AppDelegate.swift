@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //键盘事件处理
         IQKeyboardManager.sharedManager().enable = true
         //连接创建数据库
+        print("ss".docDir())
         //SQLiteManager.shareManager().openDB("db", withTable: "t_temperature")
+        
+        UINavigationBar.appearance().tintColor = UIColor.blackColor()
         return true
     }
 

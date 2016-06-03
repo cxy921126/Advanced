@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800550D81CED661600586516 /* RealtimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800550D71CED661600586516 /* RealtimeViewController.swift */; };
 		802068AE1CCBA41200464E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802068AD1CCBA41200464E3D /* AppDelegate.swift */; };
 		802068B01CCBA41200464E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802068AF1CCBA41200464E3D /* ViewController.swift */; };
 		802068B31CCBA41300464E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802068B11CCBA41300464E3D /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		800550D71CED661600586516 /* RealtimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtimeViewController.swift; sourceTree = "<group>"; };
 		802068AA1CCBA41200464E3D /* Advanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Advanced.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		802068AD1CCBA41200464E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		802068AF1CCBA41200464E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				976EF7511CDB77FD008AF09A /* ExperimentViewController.swift */,
 				974C7CB01CE2056C00DFEC0A /* RecordViewController.swift */,
 				802E54571CE766B000BC8B37 /* ChartViewController.swift */,
+				800550D71CED661600586516 /* RealtimeViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			files = (
 				802068B01CCBA41200464E3D /* ViewController.swift in Sources */,
 				976EF7521CDB77FD008AF09A /* ExperimentViewController.swift in Sources */,
+				800550D81CED661600586516 /* RealtimeViewController.swift in Sources */,
 				974C7CCC1CE34EDE00DFEC0A /* FMDatabaseAdditionsVariadic.swift in Sources */,
 				974C7CC51CE34ECB00DFEC0A /* FMDatabasePool.m in Sources */,
 				974C7CC61CE34ECB00DFEC0A /* FMDatabaseQueue.m in Sources */,

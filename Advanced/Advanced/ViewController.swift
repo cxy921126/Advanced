@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginClick(sender: AnyObject) {
-//        let userDic : [String:AnyObject] = ["username" : usernameTF.text ?? "", "password" : passwordTF.text ?? "", "id" : 1]
-//        let userAcc = UserAccount(dic: userDic)
-//        userAcc.saveAccount()
+        let userDic : [String:AnyObject] = ["username" : usernameTF.text ?? "", "password" : passwordTF.text ?? "", "id" : 1]
+        let userAcc = UserAccount(dic: userDic)
+        userAcc.saveAccount()
         view.endEditing(true)
         guard let userAccount = UserAccount.readAccount() else{
             showErrorMessage()
@@ -50,7 +50,14 @@ class ViewController: UIViewController {
         hud.mode = .Text
         hud.labelText = "用户名或密码错误！"
         hud.hide(true, afterDelay: 2)
-        
+
+    }
+    
+    func showProcessing(){
+        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+        hud.mode = .DeterminateHorizontalBar
+        hud.labelText = "test for MBP"
+        hud.hide(true, afterDelay: 5)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

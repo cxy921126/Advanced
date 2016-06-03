@@ -29,8 +29,8 @@ class ChartDrawer: NSObject{
         //动画设置
         lineChart.animate(xAxisDuration: 1, yAxisDuration: 1)
         //Y轴最小值
-        lineChart.leftAxis.axisMinValue = 0
-        lineChart.rightAxis.axisMinValue = 0
+        //lineChart.leftAxis.axisMinValue = 0
+        //lineChart.rightAxis.axisMinValue = 0
         //设置边框
         lineChart.drawBordersEnabled = true
         
@@ -41,14 +41,16 @@ class ChartDrawer: NSObject{
         }
         
         let chartDataSet = LineChartDataSet(yVals: chartDataEntries, label: "test temperature")
+        
         //设置端点大小
         chartDataSet.circleRadius = 3
-        //设置y值显示省略无效的0
+        //设置y值显示保留小数点后一位
         let valueFormatter = NSNumberFormatter()
-        valueFormatter.numberStyle = .DecimalStyle
+        valueFormatter.positiveFormat = "#.0"
         chartDataSet.valueFormatter = valueFormatter
         
         let data = LineChartData(xVals: xValues, dataSet: chartDataSet)
+        
         lineChart.data = data
         
         view.addSubview(lineChart)
@@ -61,6 +63,22 @@ class ChartDrawer: NSObject{
         }
         
         return lineChart
+    }
+        
+    func refreshNewChart(lineChart:LineChartView, index:Int, time:String){
+        let value = Double(arc4random() % 5) + 20.0
+        let entry = ChartDataEntry(value: value, xIndex: index)
+        lineChart.lineData!.dataSets[0].addEntry(entry)
+        lineChart.lineData?.addXValue(time)
+        //随着点数增加自动调整视图
+        lineChart.autoScaleMinMaxEnabled = true
+        lineChart.setVisibleXRangeMaximum(CGFloat(20))
+        if index>20 {
+            lineChart.moveViewToX(CGFloat(index-20))
+        }
+        
+        lineChart.notifyDataSetChanged()
+        lineChart.invalidateIntrinsicContentSize()
     }
 
 }
