@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginClick(sender: AnyObject) {
-        let userDic : [String:AnyObject] = ["username" : usernameTF.text ?? "", "password" : passwordTF.text ?? "", "id" : 1]
-        let userAcc = UserAccount(dic: userDic)
-        userAcc.saveAccount()
+//        let userDic : [String:AnyObject] = ["username" : usernameTF.text ?? "", "password" : passwordTF.text ?? "", "id" : 1]
+//        let userAcc = UserAccount(dic: userDic)
+//        userAcc.saveAccount()
         view.endEditing(true)
         guard let userAccount = UserAccount.readAccount() else{
             showErrorMessage()
